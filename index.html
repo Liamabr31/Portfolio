@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Liam Abrahams | Software Developer</title>
+  <meta name="description" content="Portfolio of Liam Abrahams, a junior software developer from Stellenbosch, South Africa." />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav">
+    <a href="#home" class="logo">LA<span>.</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <nav id="navLinks">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle dark and light theme">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Hi, I'm</p>
+        <h1>Liam Abrahams</h1>
+        <h2>I'm a <span id="typed" class="typed"></span><span class="cursor">|</span></h2>
+        <p class="lead">
+          Software development student from Stellenbosch with three developer internships behind me.
+          I build web apps and APIs with JavaScript, Node.js, React, Python and C#.
+        </p>
+        <div class="cta">
+          <a href="#projects" class="btn primary">View my work</a>
+          <a href="#contact" class="btn">Get in touch</a>
+          <!-- Add your CV PDF to the repo as cv.pdf, then this button will work -->
+          <a href="cv.pdf" class="btn" download>Download CV</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <!-- Put your photo in the repo as profile.jpg. If it is missing, initials show instead. -->
+        <img src="profile.jpg" alt="Photo of Liam Abrahams" id="profileImg" />
+        <div class="photo-fallback" id="photoFallback">LA</div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section reveal">
+      <h3 class="section-title">About me</h3>
+      <div class="about-grid">
+        <p>
+          I'm a goal-driven, hard-working developer who loves computers and learning something new every day.
+          I completed my software development studies at CTU Stellenbosch and have worked on client projects,
+          written documentation and business requirement specs, tested APIs, and led part of a backend team.
+        </p>
+        <div class="stats">
+          <div class="stat"><strong data-count="3">0</strong><span>Developer internships</span></div>
+          <div class="stat"><strong data-count="2">0</strong><span>Certifications</span></div>
+          <div class="stat"><strong data-count="4">0</strong><span>Languages &amp; stacks used</span></div>
+        </div>
+      </div>
+      <p class="muted">Languages: English (fluent) · Afrikaans (fluent)</p>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="section reveal">
+      <h3 class="section-title">Projects</h3>
+      <p class="muted">Filter by what I used. Replace the placeholder links with your real GitHub repos.</p>
+
+      <div class="filters" id="filters">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="frontend">Frontend</button>
+        <button class="chip" data-filter="backend">Backend</button>
+        <button class="chip" data-filter="python">Python</button>
+        <button class="chip" data-filter="csharp">C#</button>
+      </div>
+
+      <div class="cards" id="projectGrid">
+
+        <!-- EDIT ME: replace descriptions with specifics (what it does, who uses it, what you built) -->
+        <article class="card" data-tags="frontend backend">
+          <h4>Company System (Codeloom)</h4>
+          <p>Planned and built a full-stack system for a company project. I led a small team and wrote parts of the backend, including REST APIs tested with Insomnia.</p>
+          <ul class="tags"><li>Node.js</li><li>Express</li><li>React</li></ul>
+          <div class="links">
+            <a href="https://github.com/YOUR-USERNAME/REPO-NAME" target="_blank" rel="noopener">Code ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-tags="frontend">
+          <h4>Business Website (Chacks Creative Tech)</h4>
+          <p>Designed and developed a responsive website, built the HTML and CSS components, and tested it before delivery.</p>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+          <div class="links">
+            <a href="https://github.com/YOUR-USERNAME/REPO-NAME" target="_blank" rel="noopener">Code ↗</a>
+            <a href="#" target="_blank" rel="noopener">Live ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-tags="python backend">
+          <h4>Console Application (Codebow Labs)</h4>
+          <p>Built a Python console application during my internship, tested APIs with Swagger and documented the code to track progress.</p>
+          <ul class="tags"><li>Python</li><li>Swagger</li><li>Git</li></ul>
+          <div class="links">
+            <a href="https://github.com/YOUR-USERNAME/REPO-NAME" target="_blank" rel="noopener">Code ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-tags="csharp backend frontend">
+          <h4>Web-Based App in C#</h4>
+          <p>Built a web-based application in C# as part of my work at Codeloom.</p>
+          <ul class="tags"><li>C#</li><li>SQL</li></ul>
+          <div class="links">
+            <a href="https://github.com/YOUR-USERNAME/REPO-NAME" target="_blank" rel="noopener">Code ↗</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section id="experience" class="section reveal">
+      <h3 class="section-title">Experience</h3>
+      <p class="muted">Click a role to expand it.</p>
+
+      <div class="timeline">
+
+        <div class="job open">
+          <button class="job-head" aria-expanded="true">
+            <span><strong>Intern Software Developer</strong> · Codeloom</span>
+            <em>Jun 2026 – Jul 2026, Nov 2026</em>
+          </button>
+          <ul class="job-body">
+            <li>Developed and planned a system for a company project</li>
+            <li>Built and tested APIs (Insomnia) using Node.js, React and Express</li>
+            <li>Team lead, responsible for parts of the backend code</li>
+            <li>Built a web-based app using C#</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <button class="job-head" aria-expanded="false">
+            <span><strong>Intern Software Developer</strong> · Chacks Creative Tech</span>
+            <em>Nov 2025 – Dec 2025</em>
+          </button>
+          <ul class="job-body">
+            <li>Built HTML and CSS components</li>
+            <li>Developed a website using HTML, CSS and JavaScript</li>
+            <li>Tested the website</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <button class="job-head" aria-expanded="false">
+            <span><strong>Intern Software Developer</strong> · Codebow Labs</span>
+            <em>Jun 2025 – Jul 2025</em>
+          </button>
+          <ul class="job-body">
+            <li>Attended client meetings</li>
+            <li>Wrote code documentation to track progress</li>
+            <li>Set up required environments</li>
+            <li>Built a console application in Python</li>
+            <li>Drafted a Business Requirement Specification (BRS) document</li>
+            <li>API testing with Swagger</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <button class="job-head" aria-expanded="false">
+            <span><strong>Sales Person</strong> · Fox Stellenbosch &amp; Playtech Stellenbosch</span>
+            <em>2025 – Present</em>
+          </button>
+          <ul class="job-body">
+            <li>Customer-facing retail roles: setting up kiosks and helping customers</li>
+            <li>Built strong communication and reliability skills</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <h3 class="section-title small">Education &amp; certifications</h3>
+      <ul class="plain">
+        <li><strong>Software Development</strong>, CTU Stellenbosch (2025 – 2026)</li>
+        <li><strong>Matric</strong>, Calling Academy High School (2020 – 2024)</li>
+        <li><strong>Certiport Python Certification</strong></li>
+        <li><strong>Certiport HTML &amp; CSS Certification</strong></li>
+      </ul>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section reveal">
+      <h3 class="section-title">Skills</h3>
+      <p class="muted">Click a skill to highlight the projects that use it.</p>
+      <div class="skill-list" id="skillList">
+        <button class="skill" data-skill="JavaScript">JavaScript</button>
+        <button class="skill" data-skill="Node.js">Node.js</button>
+        <button class="skill" data-skill="Express">Express</button>
+        <button class="skill" data-skill="React">React</button>
+        <button class="skill" data-skill="HTML">HTML</button>
+        <button class="skill" data-skill="CSS">CSS</button>
+        <button class="skill" data-skill="Python">Python</button>
+        <button class="skill" data-skill="C#">C#</button>
+        <button class="skill" data-skill="SQL">SQL</button>
+        <button class="skill" data-skill="Git">Git</button>
+        <button class="skill" data-skill="Swagger">Swagger</button>
+        <button class="skill" data-skill="Insomnia">Insomnia</button>
+      </div>
+      <p class="muted">Also: effective communication, teamwork, punctual and reliable, Microsoft Office.</p>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section reveal">
+      <h3 class="section-title">Contact</h3>
+      <p class="muted">Based in Stellenbosch, South Africa. Open to internships, learnerships and junior developer roles.</p>
+
+      <form id="contactForm" class="form">
+        <label>Your name <input type="text" id="cName" required /></label>
+        <label>Your email <input type="email" id="cEmail" required /></label>
+        <label>Message <textarea id="cMsg" rows="5" required></textarea></label>
+        <button type="submit" class="btn primary">Send message</button>
+        <p class="muted small">This opens your email app with the message ready to send.</p>
+      </form>
+
+      <div class="social">
+        <a href="mailto:liamabr31@gmail.com">Email</a>
+        <a href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/YOUR-PROFILE" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Liam Abrahams · Built with HTML, CSS and JavaScript</p>
+  </footer>
+
+</body>
+</html>
